@@ -12,7 +12,7 @@ app.use(express.json({extended: false}))
 let config = {
   driver: "msnodesqlv8",
   connectionString:
-    "Driver={ODBC Driver 17 for SQL Server};Server=localhost;Uid=Cindy;Pwd=01234",
+    "Driver={ODBC Driver 17 for SQL Server};Server=utibuhealth-rds.cre2a0suehet.eu-west-2.rds.amazonaws.com;Uid=admin;Pwd=MayAngel254_",
 };
 
 //Connect to db
