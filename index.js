@@ -24,7 +24,7 @@ sql.connect(config, (error) => {
   }
 });
 
-app.listen(3005, () => {
+app.listen(8080, () => {
   console.log("listening on 3005");
 });
 
