@@ -1,6 +1,6 @@
 const router = require("express").Router();
-const bcrypt = require("bcrypt");
 const sql = require("mssql/msnodesqlv8");
+const bcrypt = require("bcrypt");
 
 //Create Account
 router.post("/signup", async (req, res) => {
