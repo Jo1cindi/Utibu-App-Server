@@ -13,7 +13,7 @@ router.post("/signup", async (req, res) => {
   const hashedPassword = await bcrypt.hash(password, 10);
 
   new sql.Request().query(
-    `select * from Customers where Email = '${email}' and Phone_Number = '${phoneNumber}'`,
+    `select * from Customers where Email = '${email}' and Phone = '${phoneNumber}'`,
     (error, result) => {
       if (error) {
         console.log(error);
@@ -25,7 +25,7 @@ router.post("/signup", async (req, res) => {
           });
         } else {
           new sql.Request().query(
-            `insert into Customers (Customer_ID, First_Name, Last_Name, Email, Phone_Number, Password) values ('${customerID}', '${firstName}', '${lastName}', '${email}', '${phoneNumber}', '${hashedPassword}')`,
+            `insert into Customers (Customer_ID, First_Name, Last_Name, Email, Phone, Password) values ('${customerID}', '${firstName}', '${lastName}', '${email}', '${phoneNumber}', '${hashedPassword}')`,
             (err, results) => {
               if (err) {
                 console.log(err);

@@ -12,7 +12,7 @@ app.use(express.json({extended: false}))
 let config = {
 //   driver: "msnodesqlv8",
   connectionString:
-    "Driver={ODBC Driver 17 for SQL Server};Server=utibuhealth-rds.cre2a0suehet.eu-west-2.rds.amazonaws.com;Uid=admin;Pwd=MayAngel254_",
+    "Driver={ODBC Driver 17 for SQL Server};Server=utibuhealth-rds.cre2a0suehet.eu-west-2.rds.amazonaws.com;Database=UtibuHealth;Uid=admin;Pwd=MayAngel254_",
 };
 
 //Connect to db
@@ -24,7 +24,7 @@ sql.connect(config, (error) => {
   }
 });
 
-app.listen(8080, () => {
+app.listen(3005, () => {
   console.log("listening on 8080");
 });
 
